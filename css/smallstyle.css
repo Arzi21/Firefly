@@ -1,0 +1,135 @@
+/* Fireflye  -  small screens, mobile  -  smallstyle.css
+
+/* dev colour: #442546;
+
+*/
+
+:root { /* CSS variables HAVE TO be declared within this root tag */
+	
+	/*color scheme*/
+	--main_back_color: #E5E5E5;
+	--form_back_color: white;
+	--bar_color: #5645FF;
+	--useraccess_highlight: #5645FF;
+	
+	--primary_font: black; /* main color */
+	--secondary_font: gray; /* "less prio" main color */
+	--teriary_font: white; /* Button/input color */
+}
+
+html {
+	background-color: var(--main_back_color);
+	font-family: "Raleway";
+	color: var(--primary_font);
+}
+
+body {
+	
+}
+
+header {
+	
+}
+
+main {
+	
+}
+
+
+
+/*----------------------------------------|
+|-----------------------------------------|
+|------------USER ACCESS FORMS------------|
+|-----------------------------------------|
+|----------------------------------------*/
+
+#useraccess-form {
+	border: 1px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	background-color: var(--form_back_color);
+	
+	padding: 20px;
+	margin-top: 20px;
+	
+}
+
+#useraccess-form fieldset {
+	/* Fieldset reset: */
+	border: 0;
+	padding: 0;
+	
+	/* width: 70%; */
+	margin: auto;
+}
+
+#useraccess-form fieldset legend, #useraccess-form fieldset p {
+	text-align: center;
+}
+
+#useraccess-form fieldset legend {
+	font-size: 1.2em;
+}
+
+#useraccess-form fieldset p {
+	font-size: .8em;
+	color: var(--secondary_font);
+	margin-bottom: 25px;
+	/* font-weight: 300; Want to change font weight, but no change is regiseted */ 
+}
+
+#useraccess-form input {
+	font-size: 1.2em;
+	height: 1.5em;
+	width: 100%;
+	display: block;
+	margin: 5px auto 10px auto;
+	border: 1px solid var(--useraccess_highlight);
+	border-radius: 2px;
+}
+
+#useraccess-form .submit-button {
+	border-radius: 4px;
+	height: 100%;
+	min-width: 100px;
+	max-width: 50%;
+	margin: 25px auto;
+	padding: 5px 15px;
+	color: var(--teriary_font);
+	background-color: var(--useraccess_highlight);
+}
+
+#useraccess-form div {
+	text-align: center;
+}
+
+#useraccess-form div p, #useraccess-form div button {
+	color: var(--secondary_font);
+	display: inline-block;
+	font-size: .8em;
+}
+
+#useraccess-form div button {
+	font-weight: 500;
+	border: 0px;
+	background-color: #ffffff00; /* transparent background */
+	text-decoration: underline;
+	display: inline-block;
+}
+
+
+
+#signup-form { /* Signup is inheritly hidden, JS will swap that around when needed */
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
