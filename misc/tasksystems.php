@@ -172,11 +172,6 @@ thus keeping only once (do this task each $task_day for one week) and weekly (do
 each $task_day every week).
 
 
-Issue #3: Tasks are only displaying one day, instead of all picked days.
-INFO: the current script is not optimised to handle more than one day.
-this issue happens when fetching a task that has more than one day in the database.
-
-
 Issue #4: the first task after login isn't sent to the database. not sure what causes this.
 INFO: editing the login cookie and logging back in seems to not reproduce the same issue.
 
