@@ -37,7 +37,6 @@ function showinfo(el_id) {
 	} else {
 
 		document.getElementById(el_id).style.display = "none";
-		alert("hello");
 
 	}
 
