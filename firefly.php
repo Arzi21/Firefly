@@ -81,13 +81,13 @@
 	
 	
 	<main> <!--  -->
-		
-		<!-- This Div contrains all the sign in/up/out inputs the users has to go through for accound validation -->
-		<!-- NOTE!: if the user is already signed in, the only input here will be <input name='submit_signout'> -->
-		<div id='useraccess-form'>
 		<?php //if user isn't logged in, display login forms:
 		if (!isset ($_COOKIE['UID'])) {
 			echo"
+		<!-- This Div contrains all the sign in/up/out inputs the users has to go through for accound validation -->
+		<!-- NOTE!: if the user is already signed in, the only input here will be <input name='submit_signout'> -->
+		<div id='useraccess-form'>
+		
 			<form id='signin-form' method='POST' autocomplete='off'>
 				
 				<fieldset>
@@ -150,11 +150,11 @@
 				
 				</div>
 				
-			</form>";
+			</form>
+		
+		</div>";
 		}
 		?>
-		
-		</div>
 		
 		<section> <!-- The task navigation section, content exported from database/taskdisplay.php -->
 			<!-- Im squishing the 160 lines of variable form code into task paste, as each task comes with said 160 
