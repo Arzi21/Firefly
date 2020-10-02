@@ -27,3 +27,19 @@ function toggle_useraccess() {
 }
 
 
+
+function showinfo(el_id) {
+	
+	if (getComputedStyle(document.getElementById(el_id)).display == "none") {
+		
+		document.getElementById(el_id).style.display = "grid";
+		
+	} else {
+		
+		document.getElementById(el_id).style.display = "none";
+		
+	}
+	
+	//check if style == grid: remove style
+	
+}

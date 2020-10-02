@@ -8,13 +8,21 @@
 	
 	/*color scheme*/
 	--main_back_color: #E5E5E5;
-	--form_back_color: white;
+	--item_back_color: white;
 	--bar_color: #5645FF;
 	--useraccess_highlight: #5645FF;
+	
+	--button1_color: #585666;
+	--button2_color: #87858E;
 	
 	--primary_font: black; /* main color */
 	--secondary_font: gray; /* "less prio" main color */
 	--teriary_font: white; /* Button/input color */
+	
+	--mental_color: #25D3A4;
+	--personal_color: purple;
+	--physical_color: pink;
+	--social_color: blue;
 }
 
 html {
@@ -43,44 +51,177 @@ main {
 |-----------------------------------------|
 |----------------------------------------*/
 
-#task-box {
+.task-box {
 	border: 0px solid transparent;
 	border-radius: 6px;
-	box-shadow: 0px 1px 2px #000000;
-	background-color: lightgray; /* Test color */
+	box-shadow: 0px 1px 2px gray;
+	background-color: var(--item_back_color);
 	
 	margin: 20px;
 	
 	display: grid;
-	grid-template-columns: 30px 1fr 30px;
+	grid-template-columns: 30px 1fr 40px;
 	grid-template-rows: 50px;
 	overflow: hidden;
 }
 
 /* different banners for different task categories: */
-#task-box.mental > #stripe-div {background-color: green;}
-#task-box.personal > #stripe-div {background-color: purple;}
-#task-box.physical > #stripe-div {background-color: pink;}
-#task-box.social > #stripe-div {background-color: blue;}
+.task-box.mental > #stripe-div {background-color: var(--mental_color);}
+.task-box.personal > #stripe-div {background-color: var(--personal_color);}
+.task-box.physical > #stripe-div {background-color: var(--physical_color);}
+.task-box.social > #stripe-div {background-color: var(--social_color);}
 
-#task-box > #stripe-div { /* global category banner styles: */
-	height: 120%;
-	width: 5px;
+.task-box > #stripe-div { /* global category banner styles: */
+	height: 10000%;
+	width: 4px;
 	position: relative;
 	top: -5px;
-	left: 5px;
+	left: 10px;
 }
 
-#task-box button {
+.task-box button {
 	margin: auto;
+	background-color: #ffffff00;
+	border: 0;
 }
 
-#task-box div, #task-box h3, #task-box button {
-	/* display: inline-block; */
+.task-box button img {
+	height: 25px; /* == (max)grid height */
+}
+
+.task-box #stripe-div, .task-box h3, .task-box button {
 	line-height: 1;
 	margin: auto;
 	margin-left: 0;
 	margin-right: 0;
+}
+
+
+
+
+/*----------------------------------------|
+|-----------------------------------------|
+|------------TASK INFO POPUP--------------|
+|-----------------------------------------|
+|----------------------------------------*/
+
+.task-info-box {
+	z-index: 5;
+	position: absolute; 
+	top: 240px; /* refence this to however much space the flames take */
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 90%;
+	max-width: 100%;
+	
+	border: 0px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	background-color: var(--item_back_color);
+	
+	display: grid;
+	grid-template-columns: 30px 1fr 50px;
+	grid-template-rows: 50px auto 50px auto 80px; /* Box size control */
+	overflow: hidden;
+}
+
+.exitbtn {
+	border: 0px solid transparent;
+	background-color: ffffff00;
+	font-size: 1em;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+}
+
+.task-info-box.mental > #expanded-stripe-div {background-color: var(--mental_color);}
+.task-info-box.personal > #expanded-stripe-div {background-color: var(--personal_color);}
+.task-info-box.physical > #expanded-stripe-div {background-color: var(--physical_color);}
+.task-info-box.social > #expanded-stripe-div {background-color: var(--social_color);}
+
+.task-info-box #expanded-stripe-div { /* global category banner styles: */
+	height: 10000%;
+	width: 5px;
+	position: relative;
+	top: -5px;
+	left: 10px;
+	grid-column: 1 / 2;
+	grid-row: 1 / 6;
+}
+
+.task-info-box h3 {
+	grid-column: 2 / 4;
+	grid-row: 2 / 3;
+	margin: 0;
+}
+
+.task-info-box p {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	margin: 0;
+}
+
+.task-info-box p:first-of-type {
+	color: var(--secondary_font);
+}
+
+.task-info-box p:last-of-type {
+	grid-column: 2 / 4;
+	grid-row: 4 / 5;
+	padding: 10px;
+	padding-left: 0;
+	word-break: break-all
+}
+
+.task-info-box form {
+	grid-column: 2 / 4;
+	grid-row: 5 / 6;
+	display: grid;
+	column-gap: 25px;
+	
+	margin-right: 10px;
+	
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 30px 1fr;
+}
+
+.task-info-box form .task-box-btnset1 {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	
+	background-color: var(--button1_color);
+	border: 0px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	
+}
+
+.task-info-box form .task-box-btnset2 {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	
+	background-color: var(--button2_color);
+	border: 0px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+}
+
+.task-info-box form label {
+	color: var(--teriary_font);
+	border: 0px solid #000000;
+	border-radius: 6px;
+	
+	line-height: 30px;
+	text-align: center;
+}
+
+.task-info-box form input {
+	opacity: 0%
+}
+
+.task-info-box { /* Hide all for JS */
+	display: none;
 }
 
 
@@ -96,7 +237,7 @@ main {
 	border: 1px solid transparent;
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px #000000;
-	background-color: var(--form_back_color);
+	background-color: var(--item_back_color);
 	
 	padding: 20px;
 	margin-top: 20px;
@@ -108,7 +249,6 @@ main {
 	border: 0;
 	padding: 0;
 	
-	/* width: 70%; */
 	margin: auto;
 }
 

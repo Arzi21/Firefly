@@ -45,26 +45,39 @@ if (MAGICKEY != "haangon") {
 			$days = day_array_spit($days);
 			
 			echo "
-			<article class='$priority $category $days' id='task-box'>
+			<article class='$priority $category $days task-box' id='task-box-$task_id'>
 				
 				<div id='stripe-div'>  </div>
 				
 				<h3> $title </h3>
-				<!--<p> $description </p>-->
+				
+				<button type='button' onclick='showinfo($task_id)'> <img src='images/Task_Settings.svg'> </button> <!-- js display btn -->
+				
+			</article>
+			
+			<article id='$task_id' class='$category task-info-box'>
+			
+				<button type='button' class='exitbtn' onclick='showinfo($task_id)'> &#10005; </button>
+				
+				<div id='expanded-stripe-div'> </div>
+			
+				<h3> $title </h3>
 				
 				<!--<p> priority: $priority </p>-->
-				<!--<p> repetition: $repetition </p>-->
+				<p> Repetition $repetition. </p>
 				<!--<p> $category </p>-->
 				
-				<button type='button'> : </button> <!-- placeholder for js display btn -->
+				<p> $description. </p>
 				
-				<!--<form method='POST'>
-					<label for='taskedit'> (option dots) </label>
-					<input type='submit' id='taskedit' name='$task_id' value='Edit Task'>
+				<form method='POST'>
 					
-					<label for='taskdelete'> Delete Task: </label>
-					<input type='submit' id='taskdelete' name='delete_task' value='$task_id'>
-				</form>-->
+					<label for='taskedit' class='task-box-btnset1'> Edit </label>
+					<input type='submit' class='task-box-btnset1' id='taskedit' name='$task_id' value='Edit Task'>
+					
+					<label for='taskdelete' class='task-box-btnset2'> Delete </label>
+					<input type='submit' class='task-box-btnset2' id='taskdelete' name='delete_task' value='$task_id'>
+					
+				</form>
 				
 			</article>
 					";
