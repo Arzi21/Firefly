@@ -63,7 +63,7 @@
 		
 		<nav>
 			
-			<button type='button' onclick='previous()'> <<<< </button>
+			<button type='button' onclick='previous()'> &lt;&lt;&lt;&lt; </button>
 			
 			<?php
 				
@@ -71,7 +71,7 @@
 				
 			?>
 			
-			<button type='button' onclick='next()'> >>>> </button>
+			<button type='button' onclick='next()'> &gt;&gt;&gt;&gt; </button>
 			
 		</nav>
 		
@@ -129,7 +129,7 @@
 					<label for='email_field'> E-mail </label>
 					<input type='email' id='email_field' name='usermail' autofocus required>
 					
-					<label for='name_field' method='POST' autocomplete='off'> Name </label>
+					<label for='name_field'> Name </label>
 					<input type='text' id='name_field' name='username' required>
 					
 					<label for='password_field'> Password </label>

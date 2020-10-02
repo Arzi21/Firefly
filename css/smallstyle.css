@@ -39,6 +39,55 @@ main {
 
 /*----------------------------------------|
 |-----------------------------------------|
+|--------------TASK DO LIST---------------|
+|-----------------------------------------|
+|----------------------------------------*/
+
+#task-box {
+	border: 0px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	background-color: lightgray; /* Test color */
+	
+	margin: 20px;
+	
+	display: grid;
+	grid-template-columns: 30px 1fr 30px;
+	grid-template-rows: 50px;
+	overflow: hidden;
+}
+
+/* different banners for different task categories: */
+#task-box.mental > #stripe-div {background-color: green;}
+#task-box.personal > #stripe-div {background-color: purple;}
+#task-box.physical > #stripe-div {background-color: pink;}
+#task-box.social > #stripe-div {background-color: blue;}
+
+#task-box > #stripe-div { /* global category banner styles: */
+	height: 120%;
+	width: 5px;
+	position: relative;
+	top: -5px;
+	left: 5px;
+}
+
+#task-box button {
+	margin: auto;
+}
+
+#task-box div, #task-box h3, #task-box button {
+	/* display: inline-block; */
+	line-height: 1;
+	margin: auto;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+
+
+/*----------------------------------------|
+|-----------------------------------------|
 |------------USER ACCESS FORMS------------|
 |-----------------------------------------|
 |----------------------------------------*/

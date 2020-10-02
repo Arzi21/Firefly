@@ -45,22 +45,26 @@ if (MAGICKEY != "haangon") {
 			$days = day_array_spit($days);
 			
 			echo "
-			<article class='$days$priority $category' id='taskid$task_id'>
+			<article class='$priority $category $days' id='task-box'>
+				
+				<div id='stripe-div'>  </div>
 				
 				<h3> $title </h3>
-				<p> $description </p>
+				<!--<p> $description </p>-->
 				
-				<p> priority: $priority </p>
-				<p> repetition: $repetition </p>
-				<p> $category </p>
+				<!--<p> priority: $priority </p>-->
+				<!--<p> repetition: $repetition </p>-->
+				<!--<p> $category </p>-->
 				
-				<form method='POST'>
+				<button type='button'> : </button> <!-- placeholder for js display btn -->
+				
+				<!--<form method='POST'>
 					<label for='taskedit'> (option dots) </label>
 					<input type='submit' id='taskedit' name='$task_id' value='Edit Task'>
 					
 					<label for='taskdelete'> Delete Task: </label>
 					<input type='submit' id='taskdelete' name='delete_task' value='$task_id'>
-				</form>
+				</form>-->
 				
 			</article>
 					";
