@@ -84,7 +84,7 @@
 		<?php //if user isn't logged in, display login forms:
 		if (!isset ($_COOKIE['UID'])) {
 			echo"
-		<!-- This Div contrains all the sign in/up/out inputs the users has to go through for accound validation -->
+		<!-- This Div contains all the sign in/up/out inputs the users has to go through for accound validation -->
 		<!-- NOTE!: if the user is already signed in, the only input here will be <input name='submit_signout'> -->
 		<div id='useraccess-form'>
 		
@@ -180,7 +180,7 @@
 			
 				<!-- Task Titles -->
 				<label for='task_title'> Title: </label>
-				<input type='text' id='task_title' name='title' autofocus required>
+				<input type='text' id='task_title' name='title' required> <!--add autofocus when js implement-->
 				
 				<!-- Task Descriptions -->
 				<label for='task_description'> Description: </label>
@@ -260,13 +260,6 @@
 				<input type='submit' id='create-task-btn' value='Done!' name='submit_task'>
 				
 			</form>
-			
-			
-			<section> <!-- Task Paste: -->
-				
-				
-				
-			</section>
 			
 		</div>
 		

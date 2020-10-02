@@ -65,6 +65,7 @@ if (MAGICKEY != "haangon") {
 			</article>
 					";
 					
+			
 			if (isset($_POST[$task_id])) {
 						// if you click an edit button that matches this elements id, 
 						// You'll now be able to edit any part of that unique element.
