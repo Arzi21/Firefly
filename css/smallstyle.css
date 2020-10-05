@@ -5,20 +5,20 @@
 */
 
 :root { /* CSS variables HAVE TO be declared within this root tag */
-	
+
 	/*color scheme*/
 	--main_back_color: #E5E5E5;
 	--item_back_color: white;
 	--bar_color: #5645FF;
 	--useraccess_highlight: #5645FF;
-	
+
 	--button1_color: #585666;
 	--button2_color: #87858E;
-	
+
 	--primary_font: black; /* main color */
 	--secondary_font: gray; /* "less prio" main color */
 	--teriary_font: white; /* Button/input color */
-	
+
 	--mental_color: #25D3A4;
 	--personal_color: purple;
 	--physical_color: pink;
@@ -32,15 +32,15 @@ html {
 }
 
 body {
-	
+
 }
 
 header {
-	
+
 }
 
 main {
-	
+
 }
 
 
@@ -56,9 +56,9 @@ main {
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px gray;
 	background-color: var(--item_back_color);
-	
+
 	margin: 20px;
-	
+
 	display: grid;
 	grid-template-columns: 30px 1fr 40px;
 	grid-template-rows: 50px;
@@ -107,20 +107,20 @@ main {
 
 .task-info-box {
 	z-index: 5;
-	position: absolute; 
+	position: absolute;
 	top: 240px; /* refence this to however much space the flames take */
-	left: 0; 
-	right: 0; 
-	margin-left: auto; 
-	margin-right: auto; 
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	width: 90%;
 	max-width: 100%;
-	
+
 	border: 0px solid transparent;
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px #000000;
 	background-color: var(--item_back_color);
-	
+
 	display: grid;
 	grid-template-columns: 30px 1fr 50px;
 	grid-template-rows: 50px auto 50px auto 80px; /* Box size control */
@@ -179,9 +179,9 @@ main {
 	grid-row: 5 / 6;
 	display: grid;
 	column-gap: 25px;
-	
+
 	margin-right: 10px;
-	
+
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 30px 1fr;
 }
@@ -189,18 +189,18 @@ main {
 .task-info-box form .task-box-btnset1 {
 	grid-column: 1 / 2;
 	grid-row: 2 / 3;
-	
+
 	background-color: var(--button1_color);
 	border: 0px solid transparent;
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px #000000;
-	
+
 }
 
 .task-info-box form .task-box-btnset2 {
 	grid-column: 2 / 3;
 	grid-row: 2 / 3;
-	
+
 	background-color: var(--button2_color);
 	border: 0px solid transparent;
 	border-radius: 6px;
@@ -211,7 +211,7 @@ main {
 	color: var(--teriary_font);
 	border: 0px solid #000000;
 	border-radius: 6px;
-	
+
 	line-height: 30px;
 	text-align: center;
 }
@@ -238,17 +238,17 @@ main {
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px #000000;
 	background-color: var(--item_back_color);
-	
+
 	padding: 20px;
 	margin-top: 20px;
-	
+
 }
 
 #useraccess-form fieldset {
 	/* Fieldset reset: */
 	border: 0;
 	padding: 0;
-	
+
 	margin: auto;
 }
 
@@ -264,7 +264,7 @@ main {
 	font-size: .8em;
 	color: var(--secondary_font);
 	margin-bottom: 25px;
-	/* font-weight: 300; Want to change font weight, but no change is regiseted */ 
+	/* font-weight: 300; Want to change font weight, but no change is regiseted */
 }
 
 #useraccess-form input {
@@ -313,12 +313,39 @@ main {
 }
 
 
+/*-----------------TASK INTERACTION-------------------------*/
 
+#task-creation{
+	border: 1px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	background-color: var(--item_back_color);
 
+	padding: 20px;
+	margin-top: 20px;
+}
+#task_title{
+	font-size: 1.2em;
+	height: 1.5em;
+	width: 197px;
+	display: inline-block;
+	float: left;
+	margin: 10px auto 10px auto;
+	border: 1px solid var(--useraccess_highlight);
+	border-radius: 2px;
+}
 
+#task_description {
+	font-size: 1.2em;
+	height: 5em;
+	width: 227px;
+	display: inline-block;
+	float: left;
+	margin: 5px auto 10px auto;
+	border: 1px solid var(--useraccess_highlight);
+	border-radius: 2px;
+}
 
-
-
-
-
-
+#task_prio{
+	display: inline-block;
+}
