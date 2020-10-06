@@ -28,7 +28,7 @@ function toggle_useraccess() {
 
 
 
-function showinfo(el_id) {
+function show_info(el_id) {
 
 	if (getComputedStyle(document.getElementById(el_id)).display == "none") {
 
@@ -42,6 +42,30 @@ function showinfo(el_id) {
 
 }
 
-function test() {
-	alert("test");
+
+
+function task_select(el_id) { /* overwriting old id which is "task-fullbox-var(el_id)" */
+	
+	if (document.getElementById("selected-task") == null) {
+		
+		document.getElementById("task-box-" + el_id).id = "selected-task";
+	}
+	
 }
+
+
+
+function task_select_later(el_id) {
+	document.getElementById("selected-task").id = "task-box-" + el_id;
+}
+
+
+
+
+
+
+
+
+
+
+

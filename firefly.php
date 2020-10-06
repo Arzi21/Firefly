@@ -156,8 +156,8 @@
 		}
 		?>
 
-		<section> <!-- The task navigation section, content exported from database/taskdisplay.php -->
-			<!-- Im squishing the 160 lines of variable form code into task paste, as each task comes with said 160
+		<section id='task-list'> <!-- The task navigation section, content exported from database/taskdisplay.php -->
+			<!-- Im squishing the 160 lines of variable form code into "taskpasteration", as each task comes with said 160
 			"just in case" lines of code. this is mostly done to clean up our "homefile"
 			These lines include:
 			task pasting (fetching ALL tasks from the database and formatting them for JS),

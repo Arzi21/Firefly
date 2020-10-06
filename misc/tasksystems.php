@@ -14,7 +14,7 @@ if (MAGICKEY != "haangon") {
 	|-----------------------------------------|
 	|----------------------------------------*/
 	
-	if (isset($_POST['submit_task'])) { //handeling HTML output
+	if (isset($_POST['submit_task']) && !isset($uploadfinished)) { //handeling HTML output
 	
 		//Control if user == loggedin. aviods errors later.
 		if (!isset($_COOKIE['UID'])) {
@@ -64,7 +64,9 @@ if (MAGICKEY != "haangon") {
 			
 			//test output:
 			echo "<p> Task Added! </p>";
-		
+			
+			//need to remove the refresh bug:
+			
 		}
 		
 	}

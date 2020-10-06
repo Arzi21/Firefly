@@ -45,49 +45,53 @@ if (MAGICKEY != "haangon") {
 			$days = day_array_spit($days);
 			
 			echo "
-			<article class='$priority $category $days task-box' id='task-box-$task_id' onclick='test()'>
-				
-				<div id='stripe-div'>  </div>
-				
-				<h3> $title </h3>
-				
-				<button type='button' onclick='showinfo($task_id)'> <img src='images/Task_Settings.svg'> </button> <!-- js display btn -->
-				
-			</article>
+			<article id='task-box-$task_id'>
 			
-			<form method='POST' id='task-action-prompt'>
-				
-				<label for='taskdelete' class='task-box-btnset2'> Delete </label>
-				<input type='submit' class='task-box-btnset2' id='taskdelete' name='delete_task' value='$task_id'>
-				
-				<label for='taskedit' class='task-box-btnset1'> Edit </label>
-				<input type='submit' class='task-box-btnset1' id='taskedit' name='$task_id' value='Edit Task'>
-				
-			</form>
-			
-			<article id='$task_id' class='$category task-info-box'>
-			
-				<button type='button' class='exitbtn' onclick='showinfo($task_id)'> &#10005; </button>
-				
-				<div id='expanded-stripe-div'> </div>
-			
-				<h3> $title </h3>
-				
-				<!--<p> priority: $priority </p>-->
-				<p> Repetition $repetition. </p>
-				<!--<p> $category </p>-->
-				
-				<p> $description. </p>
-				
-				<form method='POST'>
+				<div class='$priority $category $days task-box' >
 					
-					<label for='taskedit' class='task-box-btnset1'> Edit </label>
-					<input type='submit' class='task-box-btnset1' id='taskedit' name='$task_id' value='Edit Task'>
+					<div id='stripe-div'>  </div>
 					
-					<label for='taskdelete' class='task-box-btnset2'> Delete </label>
+					<h3 onclick='task_select($task_id)'> $title </h3>
+					<!-- putting the onclick on the article made pressing it unavoidable if the user wanted the option dots -->
+					
+					<button type='button' onclick='show_info($task_id)'> <img src='images/Task_Settings.svg'> </button> <!-- js display btn -->
+					
+				</div>
+				
+				<form method='POST' class='task-action-prompt' id='task-action-prompt-$task_id'>
+					
+					<label for='taskdelete' class='task-box-btnset2'> Finish Now </label>
 					<input type='submit' class='task-box-btnset2' id='taskdelete' name='delete_task' value='$task_id'>
 					
+					<button type='button' onclick='task_select_later($task_id)'> Finish Later </button>
+					
 				</form>
+				
+				<div id='$task_id' class='$category task-info-box'>
+				
+					<button type='button' class='exitbtn' onclick='show_info($task_id)'> &#10005; </button>
+					
+					<div id='expanded-stripe-div'> </div>
+				
+					<h3> $title </h3>
+					
+					<!--<p> priority: $priority </p>-->
+					<p> Repetition $repetition. </p>
+					<!--<p> $category </p>-->
+					
+					<p> $description. </p>
+					
+					<form method='POST'>
+						
+						<label for='taskedit' class='task-box-btnset1'> Edit </label>
+						<input type='submit' class='task-box-btnset1' id='taskedit' name='$task_id' value='Edit Task'>
+						
+						<label for='taskdelete' class='task-box-btnset2'> Delete </label>
+						<input type='submit' class='task-box-btnset2' id='taskdelete' name='delete_task' value='$task_id'>
+						
+					</form>
+					
+				</div>
 				
 			</article>
 					";

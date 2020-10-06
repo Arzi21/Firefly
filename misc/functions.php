@@ -13,6 +13,7 @@ if (MAGICKEY != "haangon") {
 		$string = str_replace('";', "", $string);
 		$string = str_replace("?>", "", $string);
 		$string = str_replace("<!--", "", $string);
+		$string = str_replace("'", "&#39;", $string);
 		return($string);
 		
 	}

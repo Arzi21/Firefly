@@ -51,13 +51,23 @@ main {
 |-----------------------------------------|
 |----------------------------------------*/
 
+#task-list {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+#task-list #selected-task {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
 .task-box {
 	border: 0px solid transparent;
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px gray;
 	background-color: var(--item_back_color);
 
-	margin: 20px;
+	margin: 30px 20px 10px 20px;
 
 	display: grid;
 	grid-template-columns: 30px 1fr 40px;
@@ -94,6 +104,44 @@ main {
 	margin: auto;
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.task-action-prompt{
+	display: none;
+}
+
+#selected-task > .task-action-prompt {
+	display: grid;
+	grid-template-columns: 1fr / 1fr;
+	grid-template-rows: 50px;
+}
+
+.task-action-prompt label, .task-action-prompt input, .task-action-prompt button { /* repeating values*/
+	color: var(--teriary_font);
+	border: 0px solid transparent;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px #000000;
+	margin: 10px;
+	padding: 5px;
+	align-self: center;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.task-action-prompt label, .task-action-prompt input {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	background-color: var(--button1_color);
+}
+
+.task-action-prompt input {
+	opacity: 0%;
+}
+
+.task-action-prompt button {
+	grid-column: 2/3;
+	background-color: var(--button2_color);
 }
 
 
