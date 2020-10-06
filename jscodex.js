@@ -40,6 +40,8 @@ function showinfo(el_id) {
 
 	}
 
-	//check if style == grid: remove style
+}
 
+function test() {
+	alert("test");
 }

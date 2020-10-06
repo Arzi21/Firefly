@@ -45,7 +45,7 @@ if (MAGICKEY != "haangon") {
 			$days = day_array_spit($days);
 			
 			echo "
-			<article class='$priority $category $days task-box' id='task-box-$task_id'>
+			<article class='$priority $category $days task-box' id='task-box-$task_id' onclick='test()'>
 				
 				<div id='stripe-div'>  </div>
 				
@@ -54,6 +54,16 @@ if (MAGICKEY != "haangon") {
 				<button type='button' onclick='showinfo($task_id)'> <img src='images/Task_Settings.svg'> </button> <!-- js display btn -->
 				
 			</article>
+			
+			<form method='POST' id='task-action-prompt'>
+				
+				<label for='taskdelete' class='task-box-btnset2'> Delete </label>
+				<input type='submit' class='task-box-btnset2' id='taskdelete' name='delete_task' value='$task_id'>
+				
+				<label for='taskedit' class='task-box-btnset1'> Edit </label>
+				<input type='submit' class='task-box-btnset1' id='taskedit' name='$task_id' value='Edit Task'>
+				
+			</form>
 			
 			<article id='$task_id' class='$category task-info-box'>
 			
