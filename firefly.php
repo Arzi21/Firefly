@@ -175,14 +175,22 @@
 	<footer>
 
 		<div id='task-creation'> <!-- The Task creation div -->
-
+			<legend id="boxtitle">New Task</legend>
 			<form id='task-form' method='POST' autocomplete='off'>
-				<br>
+
 				<!-- Task Titles -->
 				<label for='task_title'> Title: </label>
 				<input type='text' id='task_title' name='title' required> <!--add autofocus when js implement-->
+
 				<!-- Task Priority -->
-				<input type='checkbox' id='task_prio' value='1' name='prio'>
+				<div class="prio-cb">
+					<input type='checkbox' id='task_prio' value='1' name='task-prio'>
+					<label for="task-prio">
+						<img src="images/star.svg" alt="">
+
+					</label>
+				</div>
+
 				<!-- Task Descriptions -->
 				<label for='task_description'> Description: </label>
 				<textarea id='task_description' name='description' rows='4' cols='40'></textarea>
@@ -192,17 +200,28 @@
 
 					<legend> Categories </legend>
 					<div class="categories">
-						<label for='task_type1'> Mental </label>
-						<input type='radio' id='task_type1' value='mental' name='category' required>
 
-						<label for='task_type2'> Personal </label>
-						<input type='radio' id='task_type2' value='personal' name='category' required>
+						<div class="cat-block">
+							<label for='task_type1'> Mental </label>
+							<input type='radio' id='task_type1' value='mental' name='category' required>
+						</div>
 
-						<label for='task_type3'> Physical </label>
-						<input type='radio' id='task_type3' value='physical' name='category' required>
+						<div class="cat-block">
+							<label for='task_type2'> Personal </label>
+							<input type='radio' id='task_type2' value='personal' name='category' required>
+						</div>
 
-						<label for='task_type4'> Social </label>
-						<input type='radio' id='task_type4' value='social' name='category' required>
+						<div class="cat-block">
+							<label for='task_type3'> Physical </label>
+							<input type='radio' id='task_type3' value='physical' name='category' required>
+						</div>
+
+						<div class="cat-block">
+							<label for='task_type4'> Social </label>
+							<input type='radio' id='task_type4' value='social' name='category' required>
+						</div>
+
+
 
 					</div>
 
@@ -215,26 +234,42 @@
 					<!-- we COULD use JS to force users to select atleast one item.
 					But we'd eventually change it back to this. -->
 
-					<label for='task_day1'> Mon </label>
-					<input type='checkbox' id='task_day1' value='1' name='day[]'>
+					<div class="day-block">
+						<label for='task_day1'> Mon </label>
+						<input type='checkbox' id='task_day1' value='1' name='day[]'>
+					</div>
 
-					<label for='task_day2'> Tue </label>
-					<input type='checkbox' id='task_day2' value='2' name='day[]'>
+					<div class="day-block">
+						<label for='task_day2'> Tue </label>
+						<input type='checkbox' id='task_day2' value='2' name='day[]'>
+					</div>
 
-					<label for='task_day3'> Wed </label>
-					<input type='checkbox' id='task_day3' value='3' name='day[]'>
+					<div class="day-block">
+						<label for='task_day3'> Wed </label>
+						<input type='checkbox' id='task_day3' value='3' name='day[]'>
 
-					<label for='task_day4'> Thu </label>
-					<input type='checkbox' id='task_day4' value='4' name='day[]'>
+					</div>
 
-					<label for='task_day5'> Fri </label>
-					<input type='checkbox' id='task_day5' value='5' name='day[]'>
+					<div class="day-block">
+						<label for='task_day4'> Thu </label>
+						<input type='checkbox' id='task_day4' value='4' name='day[]'>
 
-					<label for='task_day6'> Sat </label>
-					<input type='checkbox' id='task_day6' value='6' name='day[]'>
+					</div>
 
-					<label for='task_day7'> Sun </label>
-					<input type='checkbox' id='task_day7' value='0' name='day[]'>
+					<div class="day-block">
+						<label for='task_day5'> Fri </label>
+						<input type='checkbox' id='task_day5' value='5' name='day[]'>
+					</div>
+
+					<div class="day-block">
+						<label for='task_day6'> Sat </label>
+						<input type='checkbox' id='task_day6' value='6' name='day[]'>
+					</div>
+
+					<div class="day-block">
+						<label for='task_day7'> Sun </label>
+						<input type='checkbox' id='task_day7' value='0' name='day[]'>
+					</div>
 
 				</fieldset>
 
@@ -243,14 +278,21 @@
 
 					<legend> Repetition </legend>
 
-					<label for='task_repetition1'> Once </label>
-					<input type='radio' id='task_repetition1' value='once' name='repetition' required>
+					<div class="rep-block">
+						<label for='task_repetition1'> Once </label>
+						<input type='radio' id='task_repetition1' value='once' name='repetition' required>
+					</div>
 
-					<label for='task_repetition2'> Daily </label>
-					<input type='radio' id='task_repetition2' value='daily' name='repetition' required>
+					<div class="rep-block">
+						<label for='task_repetition2'> Daily </label>
+						<input type='radio' id='task_repetition2' value='daily' name='repetition' required>
+					</div>
 
-					<label for='task_repetition3'> Weekly </label>
-					<input type='radio' id='task_repetition3' value='weekly' name='repetition' required>
+					<div class="rep-block">
+						<label for='task_repetition3'> Weekly </label>
+						<input type='radio' id='task_repetition3' value='weekly' name='repetition' required>
+					</div>
+
 
 				</fieldset>
 

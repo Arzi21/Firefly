@@ -372,6 +372,7 @@ main {
 	padding: 20px;
 	margin-top: 20px;
 }
+
 #task_title{
 	font-size: 1.2em;
 	height: 1.5em;
@@ -387,7 +388,6 @@ main {
 	font-size: 1.2em;
 	height: 5em;
 	width: 227px;
-	display: inline-block;
 	float: left;
 	margin: 5px auto 10px auto;
 	border: 1px solid var(--useraccess_highlight);
@@ -396,4 +396,26 @@ main {
 
 #task_prio{
 	display: inline-block;
+
+}
+
+#boxtitle{
+	text-align: center;
+}
+
+.day-block {
+	display:inline-block;
+}
+.cat-block{
+	display: inline-block;
+	margin: 5px auto 10px auto;
+	border: 1px solid var(--useraccess_highlight);
+	border-radius: 2px;
+}
+
+.rep-block{
+	display: inline-block;
+	margin: 5px auto 10px auto;
+	border: 1px solid var(--useraccess_highlight);
+	border-radius: 2px;
 }
