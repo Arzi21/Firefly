@@ -368,7 +368,6 @@ main {
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px #000000;
 	background-color: var(--item_back_color);
-
 	padding: 20px;
 	margin-top: 20px;
 }
@@ -378,7 +377,6 @@ main {
 	height: 1.5em;
 	width: 197px;
 	display: inline-block;
-	float: left;
 	margin: 10px auto 10px auto;
 	border: 1px solid var(--useraccess_highlight);
 	border-radius: 2px;
@@ -400,12 +398,14 @@ main {
 }
 
 #boxtitle{
-	text-align: center;
+	font-size: 1.2em;
+
 }
 
 .day-block {
 	display:inline-block;
 }
+
 .cat-block{
 	display: inline-block;
 	margin: 5px auto 10px auto;

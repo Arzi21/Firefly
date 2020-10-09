@@ -41,7 +41,6 @@
 
 
 <body>
-
 	<header>
 
 		<?php
@@ -186,8 +185,7 @@
 				<div class="prio-cb">
 					<input type='checkbox' id='task_prio' value='1' name='task-prio'>
 					<label for="task-prio">
-						<img src="images/star.svg" alt="">
-
+						<p>&#9734;</p>
 					</label>
 				</div>
 
