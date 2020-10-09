@@ -47,7 +47,7 @@ if (MAGICKEY != "haangon") {
 			echo "
 			<article id='task-box-$task_id'>
 			
-				<div class='$priority $category $days task-box' >
+				<div class='$priority $category task-box $days' >
 					
 					<div id='stripe-div'>  </div>
 					
