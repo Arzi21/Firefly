@@ -86,34 +86,11 @@ var currentday = fulldays[day];
 
 // Title Control:
 document.getElementById('day-title').innerHTML = currentday;
-
-
-
-
 	
-for (var ii = 0; ii <= 6; ii++) {
-	
-	var tasks = document.getElementsByClassName(days[ii]);
-	for (var i = 0; i < tasks.length; i++) {
-		tasks[i].style.display = 'none';
-	}
-	
-}
-	
-	
-	
-
 var tasks = document.getElementsByClassName(days[day]);
 for (var i = 0; i < tasks.length; i++) {
 	tasks[i].style.display = 'grid';
 }
-
-
-
-// if (getComputedStyle(document.getElementsByClassName(days[day])).display == "none") 
-
-
-
 
 
 function day_nav(order) { //function expect an order: "next" or "previous"
@@ -145,9 +122,6 @@ function day_nav(order) { //function expect an order: "next" or "previous"
 		
 	}
 	
-	//Content Control:
-	// alert(days[day])
-	// document.getElementsByClassName(days[days]).style.display = "block";
 	var tasks = document.getElementsByClassName(days[day]);
 	for (var i = 0; i < tasks.length; i++) {
 		tasks[i].style.display = 'grid';
