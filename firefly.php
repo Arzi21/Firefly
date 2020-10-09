@@ -62,15 +62,11 @@
 
 		<nav>
 
-			<button type='button' onclick='previous()'> &lt;&lt;&lt;&lt; </button>
+			<button type='button' class='day-nav' onclick='day_nav("previous")'> &lt;&lt;&lt;&lt; </button>
 
-			<?php
+			<h2 id='day-title'> This page requires Javascript to run! </h2>
 
-				echo "<h2> $days[$current_day] </h2>";
-
-			?>
-
-			<button type='button' onclick='next()'> &gt;&gt;&gt;&gt; </button>
+			<button type='button' class='day-nav' onclick='day_nav("next")'> &gt;&gt;&gt;&gt; </button>
 
 		</nav>
 
