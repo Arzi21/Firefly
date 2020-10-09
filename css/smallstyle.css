@@ -405,13 +405,8 @@ main {
 }
 
 #boxtitle{
-<<<<<<< Updated upstream
-	font-size: 1.2em;
-
-=======
 	text-align: center;
 	font-size: 2em;
->>>>>>> Stashed changes
 }
 
 .day-block {
