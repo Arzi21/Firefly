@@ -136,8 +136,17 @@ function day_nav(order) { //function expect an order: "next" or "previous"
 	currentday = fulldays[day];
 	document.getElementById('day-title').innerHTML = currentday;
 	
+	for (var ii = 0; ii <= 6; ii++) {
+	
+		var tasks = document.getElementsByClassName(days[ii]);
+		for (var i = 0; i < tasks.length; i++) {
+			tasks[i].style.display = 'none';
+		}
+		
+	}
+	
 	//Content Control:
-	alert(days[day])
+	// alert(days[day])
 	// document.getElementsByClassName(days[days]).style.display = "block";
 	var tasks = document.getElementsByClassName(days[day]);
 	for (var i = 0; i < tasks.length; i++) {
